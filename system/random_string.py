@@ -1,18 +1,37 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from ansible.module_utils.basic import *
 from string import ascii_lowercase
 from string import ascii_uppercase
 from string import digits
 import random
+
+"""
+
+Ansible module to manage mysql replication
+(c) 2016, Ivica Kolenkaš <ivica.kolenkas@gmail.com>
+
+This file is part of Ansible
+
+Ansible is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Ansible is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
+"""
 
 DOCUMENTATION = '''
 ---
 module: random_string
 author:
     - "Ivica Kolenkaš (ivica.kolenkas@gmail.com)"
-version_added: "2.0.1.0"
+version_added: "2.1"
 description:
     - Generate random strings.
 short_description: Generate random strings.
@@ -109,6 +128,6 @@ def main():
 
     module.exit_json(rand_string=rand_string)
 
-
+from ansible.module_utils.basic import *
 if __name__ == '__main__':
     main()
