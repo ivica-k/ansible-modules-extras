@@ -12,7 +12,7 @@ DOCUMENTATION = '''
 module: random_string
 author:
     - "Ivica Kolenkaš (ivica.kolenkas@gmail.com)"
-version_added: 2.0.1.0
+version_added: "2.0.1.0"
 description:
     - Generate random strings.
 short_description: Generate random strings.
